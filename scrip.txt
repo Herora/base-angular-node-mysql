@@ -1,0 +1,28 @@
+create database prueba;
+use prueba;
+
+create table asesor (
+id int(11) auto_increment not null primary key,
+nombre varchar(30),
+cedula int(11),
+telefono int(11),
+fecha_nac date,
+genero varchar(10),
+cliente  varchar(25),
+sede  varchar(25),
+edad int(11)
+);
+
+create table user (
+id int(11) auto_increment not null primary key,
+usuario varchar(25),
+clave varchar(10),
+estado varchar(10)
+);
+
+INSERT INTO user values
+(1,'comunicaciones','Reg1234','activo'),
+(2,'gestión','Ges1234','inactivo');
+
+
+SELECT * FROM user WHERE usuario = 'comunicaciones' AND clave = 'Reg1234asesornombre';
